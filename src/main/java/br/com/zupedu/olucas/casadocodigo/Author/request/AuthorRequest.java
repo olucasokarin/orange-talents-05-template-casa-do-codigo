@@ -1,6 +1,6 @@
-package br.com.zupedu.olucas.casadocodigo.Author.request;
+package br.com.zupedu.olucas.casadocodigo.author.request;
 
-import br.com.zupedu.olucas.casadocodigo.Author.model.Author;
+import br.com.zupedu.olucas.casadocodigo.author.model.Author;
 import br.com.zupedu.olucas.casadocodigo.validators.Exists;
 
 import javax.validation.constraints.Email;

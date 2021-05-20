@@ -1,8 +1,8 @@
-package br.com.zupedu.olucas.casadocodigo.Author.controller;
+package br.com.zupedu.olucas.casadocodigo.author.controller;
 
-import br.com.zupedu.olucas.casadocodigo.Author.model.Author;
-import br.com.zupedu.olucas.casadocodigo.Author.request.AuthorRepository;
-import br.com.zupedu.olucas.casadocodigo.Author.request.AuthorRequest;
+import br.com.zupedu.olucas.casadocodigo.author.model.Author;
+import br.com.zupedu.olucas.casadocodigo.author.repository.AuthorRepository;
+import br.com.zupedu.olucas.casadocodigo.author.request.AuthorRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

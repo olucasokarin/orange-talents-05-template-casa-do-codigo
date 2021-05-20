@@ -1,4 +1,4 @@
-package br.com.zupedu.olucas.casadocodigo.Author.model;
+package br.com.zupedu.olucas.casadocodigo.author.model;
 
 import org.springframework.data.annotation.CreatedDate;
 
