@@ -18,6 +18,7 @@ public class Author {
     private String name;
     @Email
     @NotBlank
+    @Column(unique = true)
     private String email;
     @NotBlank
     @Column(length = 400)
