@@ -7,7 +7,7 @@ import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 import java.util.List;
 
-public class ExistsValidator implements ConstraintValidator<Exists, Object> {
+public class UniqueValueValidator implements ConstraintValidator<UniqueValue, Object> {
 
     @PersistenceContext
     private EntityManager manager;
@@ -16,7 +16,7 @@ public class ExistsValidator implements ConstraintValidator<Exists, Object> {
     private String attribute;
 
     @Override
-    public void initialize(Exists annotation) {
+    public void initialize(UniqueValue annotation) {
         this.entity = annotation.entity();
         this.attribute = annotation.attribute();
     }
@@ -28,6 +28,6 @@ public class ExistsValidator implements ConstraintValidator<Exists, Object> {
         query.setParameter("comparator", value);
 
         List<?> result = query.getResultList();
-        return !result.isEmpty();
+        return result.isEmpty();
     }
 }

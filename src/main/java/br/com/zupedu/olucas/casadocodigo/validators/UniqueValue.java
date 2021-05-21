@@ -9,10 +9,10 @@ import java.lang.annotation.Target;
 
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-@Constraint(validatedBy = { ExistsValidator.class })
-public @interface Exists {
+@Constraint(validatedBy = { UniqueValueValidator.class })
+public @interface UniqueValue {
 
-    String message() default "Data not exists";
+    String message() default "Data already exists";
     Class<?>[] groups() default { };
     Class<? extends Payload>[] payload() default  { };
 
