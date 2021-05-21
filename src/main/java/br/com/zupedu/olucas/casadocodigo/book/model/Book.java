@@ -69,4 +69,36 @@ public class Book {
     public String getTitle() {
         return title;
     }
+
+    public String getResume() {
+        return resume;
+    }
+
+    public String getSummary() {
+        return summary;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public Integer getNumberPage() {
+        return numberPage;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public Author getAuthor() {
+        return author;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public LocalDateTime getPublishDate() {
+        return publishDate;
+    }
 }
