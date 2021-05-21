@@ -2,6 +2,7 @@ package br.com.zupedu.olucas.casadocodigo.author.request;
 
 import br.com.zupedu.olucas.casadocodigo.author.model.Author;
 import br.com.zupedu.olucas.casadocodigo.validators.Exists;
+import br.com.zupedu.olucas.casadocodigo.validators.UniqueValue;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -12,7 +13,7 @@ public class AuthorRequest {
     private String name;
     @Email
     @NotBlank
-    @Exists(entity = Author.class, attribute = "email")
+    @UniqueValue(entity = Author.class, attribute = "email")
     private String email;
     @NotBlank
     @Size(max = 400)
