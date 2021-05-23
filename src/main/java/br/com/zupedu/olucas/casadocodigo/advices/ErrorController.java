@@ -21,12 +21,31 @@ public class ErrorController extends ResponseEntityExceptionHandler {
             MethodArgumentNotValidException ex,
             HttpHeaders headers, HttpStatus status,
             WebRequest request) {
-        List<String> errors = ex.getBindingResult()
+        List<Error> errors = ex.getBindingResult()
                 .getFieldErrors()
                 .stream()
-                .map(error -> error.getField() + ": " + error.getDefaultMessage())
+                .map(error -> new Error(error.getField(), error.getDefaultMessage())
+                )
                 .collect(Collectors.toList());
         ApiError apiError = new ApiError(DEFAULT_VALIDATION_FAILED_MESSAGE, errors);
         return handleExceptionInternal(ex, apiError, headers, HttpStatus.BAD_REQUEST, request);
+    }
+}
+
+class Error {
+    String field;
+    String message;
+
+    public Error(String field, String message) {
+        this.field = field;
+        this.message = message;
+    }
+
+    public String getField() {
+        return field;
+    }
+
+    public String getMessage() {
+        return message;
     }
 }

@@ -4,14 +4,14 @@ import java.util.List;
 
 class ApiError {
     private final String message;
-    private final List<String> errors;
+    private final List<Error> errors;
 
-    ApiError(String message, List<String> errors) {
+    ApiError(String message, List<Error> errors) {
         this.message = message;
         this.errors = errors;
     }
 
     public String getMessage() { return message; }
 
-    public List<String> getErrors() { return errors; }
+    public List<Error> getErrors() { return errors; }
 }
