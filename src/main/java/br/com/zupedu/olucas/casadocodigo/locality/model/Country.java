@@ -22,4 +22,8 @@ public class Country {
     public Country(String name) {
         this.name = name;
     }
+
+    public List<State> getState() {
+        return state;
+    }
 }

@@ -9,4 +9,6 @@ import org.springframework.stereotype.Repository;
 public interface StateRepository extends JpaRepository<State, Long> {
     @Query("select 1 from State s where s.name = :name and s.country.id = :id")
     Integer findByNameAndCountry(String name, Long id);
+
+    State findByName(String name);
 }
